@@ -15,7 +15,7 @@ public class ExcelWriter {
         int rowCount = 0;
 
         for (int i = 0; i < rankingList.size(); i++) {
-            Row row = sheet.createRow(++rowCount);
+            Row row = sheet.createRow(rowCount++);
             if (i == 0) {
                 writeHeaders(row);
             } else {
@@ -29,73 +29,73 @@ public class ExcelWriter {
     }
 
     private void writeHeaders(Row row) {
-        Cell cell = row.createCell(1);
+        Cell cell = row.createCell(0);
         cell.setCellValue("Rank");
 
-        cell = row.createCell(2);
+        cell = row.createCell(1);
         cell.setCellValue("City");
 
-        cell = row.createCell(3);
+        cell = row.createCell(2);
         cell.setCellValue("Quality of Life Index");
 
-        cell = row.createCell(4);
+        cell = row.createCell(3);
         cell.setCellValue("Purchasing Power Index");
 
-        cell = row.createCell(5);
+        cell = row.createCell(4);
         cell.setCellValue("Safety Index");
 
-        cell = row.createCell(6);
+        cell = row.createCell(5);
         cell.setCellValue("Health Care Index");
 
-        cell = row.createCell(7);
+        cell = row.createCell(6);
         cell.setCellValue("Cost of Living Index");
 
-        cell = row.createCell(8);
+        cell = row.createCell(7);
         cell.setCellValue("Property Price to Income Ratio");
 
-        cell = row.createCell(9);
+        cell = row.createCell(8);
         cell.setCellValue("Traffic Commute Time Index");
 
-        cell = row.createCell(10);
+        cell = row.createCell(9);
         cell.setCellValue("Pollution Index");
 
-        cell = row.createCell(11);
+        cell = row.createCell(10);
         cell.setCellValue("Climate Index");
     }
 
 
     private void writeRanking(Ranking ranking, Row row) {
-        Cell cell = row.createCell(1);
+        Cell cell = row.createCell(0);
         cell.setCellValue(row.getRowNum());
 
-        cell = row.createCell(2);
+        cell = row.createCell(1);
         cell.setCellValue(ranking.getCity());
 
-        cell = row.createCell(3);
+        cell = row.createCell(2);
         cell.setCellValue(ranking.getQualityOfLifeIndex());
 
-        cell = row.createCell(4);
+        cell = row.createCell(3);
         cell.setCellValue(ranking.getPurchasingPowerIndex());
 
-        cell = row.createCell(5);
+        cell = row.createCell(4);
         cell.setCellValue(ranking.getSafetyIndex());
 
-        cell = row.createCell(6);
+        cell = row.createCell(5);
         cell.setCellValue(ranking.getHealthCareIndex());
 
-        cell = row.createCell(7);
+        cell = row.createCell(6);
         cell.setCellValue(ranking.getCostOfLivingIndex());
 
-        cell = row.createCell(8);
+        cell = row.createCell(7);
         cell.setCellValue(ranking.getPropertyPriceToIncomeRatio());
 
-        cell = row.createCell(9);
+        cell = row.createCell(8);
         cell.setCellValue(ranking.getTrafficCommuteTimeIndex());
 
-        cell = row.createCell(10);
+        cell = row.createCell(9);
         cell.setCellValue(ranking.getPollutionIndex());
 
-        cell = row.createCell(11);
+        cell = row.createCell(10);
         cell.setCellValue(ranking.getClimateIndex());
     }
 
